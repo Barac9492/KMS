@@ -43,7 +43,7 @@ themes:
   양자컴퓨터:
     keywords: ["양자컴퓨터", "양자컴퓨팅", "큐비트"]
     instruments:
-      - {name: "KOSEF 양자컴퓨팅", code: "488600", type: etf}
+      [] # no verified KRX-listed ETF
     category: 테크
 
   자율주행:
@@ -73,7 +73,7 @@ themes:
   온디바이스AI:
     keywords: ["온디바이스AI", "엣지AI", "NPU"]
     instruments:
-      - {name: "TIGER 온디바이스AI", code: "488570", type: etf}
+      [] # no verified KRX-listed ETF
     category: 테크
 
   # ── 로봇/자동화 ────────────────────────────────────────
@@ -86,7 +86,7 @@ themes:
   드론:
     keywords: ["드론", "UAM", "도심항공"]
     instruments:
-      - {name: "TIGER 드론&UAM", code: "494680", type: etf}
+      [] # no verified KRX-listed ETF
     category: 로봇
 
   # ── 방산/우주 ──────────────────────────────────────────
@@ -159,7 +159,7 @@ themes:
   K뷰티:
     keywords: ["K뷰티", "화장품주", "K-beauty"]
     instruments:
-      - {name: "KODEX K-뷰티", code: "475710", type: etf}
+      [] # no verified KRX-listed ETF
     category: 소비
 
   K푸드:
@@ -222,7 +222,7 @@ themes:
   엔터:
     keywords: ["K-pop", "엔터주", "하이브"]
     instruments:
-      - {name: "TIGER K-엔터", code: "475730", type: etf}
+      [] # no verified KRX-listed ETF
     category: 기타
 
   게임:
