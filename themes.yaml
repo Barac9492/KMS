@@ -1,0 +1,250 @@
+# KMS Theme Universe — keywords for search scanning + instruments to trade
+# Add new themes here without code changes.
+
+scan:
+  surge_threshold: 1.5       # search_ratio above this = surge detected
+  batch_delay_seconds: 0.5   # delay between Naver API calls
+
+themes:
+  # ── 에너지 ─────────────────────────────────────────────
+  2차전지:
+    keywords: ["2차전지", "전기차 배터리", "에코프로"]
+    instruments:
+      - {name: "TIGER 2차전지테마", code: "305540", type: etf}
+      - {name: "KODEX 2차전지산업", code: "305720", type: etf}
+    category: 에너지
+
+  원전:
+    keywords: ["원전", "소형모듈원자로", "SMR"]
+    instruments:
+      - {name: "HANARO 원자력iSelect", code: "472160", type: etf}
+    category: 에너지
+
+  수소:
+    keywords: ["수소경제", "수소차", "연료전지"]
+    instruments:
+      - {name: "TIGER 수소경제", code: "396520", type: etf}
+    category: 에너지
+
+  태양광:
+    keywords: ["태양광", "태양에너지", "솔라"]
+    instruments:
+      - {name: "TIGER 신재생에너지", code: "367770", type: etf}
+    category: 에너지
+
+  # ── 테크 ───────────────────────────────────────────────
+  AI반도체:
+    keywords: ["AI 반도체", "HBM", "엔비디아"]
+    instruments:
+      - {name: "KODEX AI반도체핵심장비", code: "396500", type: etf}
+      - {name: "TIGER AI코리아그로스액티브", code: "448290", type: etf}
+    category: 테크
+
+  양자컴퓨터:
+    keywords: ["양자컴퓨터", "양자컴퓨팅", "큐비트"]
+    instruments:
+      - {name: "KOSEF 양자컴퓨팅", code: "488600", type: etf}
+    category: 테크
+
+  자율주행:
+    keywords: ["자율주행", "라이다", "자율주행차"]
+    instruments:
+      - {name: "KODEX K-자율주행액티브", code: "456600", type: etf}
+    category: 테크
+
+  메타버스:
+    keywords: ["메타버스", "가상현실", "VR"]
+    instruments:
+      - {name: "KODEX K-메타버스액티브", code: "401470", type: etf}
+    category: 테크
+
+  클라우드:
+    keywords: ["클라우드", "SaaS", "클라우드컴퓨팅"]
+    instruments:
+      - {name: "TIGER 글로벌클라우드컴퓨팅INDXX", code: "411060", type: etf}
+    category: 테크
+
+  사이버보안:
+    keywords: ["사이버보안", "정보보안", "보안주"]
+    instruments:
+      - {name: "TIGER 사이버보안", code: "474220", type: etf}
+    category: 테크
+
+  온디바이스AI:
+    keywords: ["온디바이스AI", "엣지AI", "NPU"]
+    instruments:
+      - {name: "TIGER 온디바이스AI", code: "488570", type: etf}
+    category: 테크
+
+  # ── 로봇/자동화 ────────────────────────────────────────
+  로봇:
+    keywords: ["협동로봇", "로봇주", "레인보우로보틱스"]
+    instruments:
+      - {name: "KODEX K-로봇액티브", code: "441680", type: etf}
+    category: 로봇
+
+  드론:
+    keywords: ["드론", "UAM", "도심항공"]
+    instruments:
+      - {name: "TIGER 드론&UAM", code: "494680", type: etf}
+    category: 로봇
+
+  # ── 방산/우주 ──────────────────────────────────────────
+  방산:
+    keywords: ["방산주", "한화에어로스페이스", "K방산"]
+    instruments:
+      - {name: "TIGER 방산산업", code: "457480", type: etf}
+      - {name: "KODEX K-방산우주", code: "494670", type: etf}
+      - {name: "한화에어로스페이스", code: "012450", type: stock}
+    category: 방산
+
+  우주항공:
+    keywords: ["우주항공", "위성", "우주산업"]
+    instruments:
+      - {name: "KODEX K-방산우주", code: "494670", type: etf}
+    category: 방산
+
+  # ── 바이오/헬스 ────────────────────────────────────────
+  바이오:
+    keywords: ["바이오주", "신약 개발", "임상시험"]
+    instruments:
+      - {name: "TIGER 헬스케어", code: "143860", type: etf}
+      - {name: "KODEX 바이오", code: "244580", type: etf}
+    category: 바이오
+
+  신약:
+    keywords: ["신약개발", "FDA승인", "바이오신약"]
+    instruments:
+      - {name: "KODEX 바이오", code: "244580", type: etf}
+    category: 바이오
+
+  비만치료제:
+    keywords: ["비만치료제", "GLP-1", "위고비"]
+    instruments:
+      - {name: "KODEX 비만치료제", code: "489250", type: etf}
+    category: 바이오
+
+  알츠하이머:
+    keywords: ["알츠하이머", "치매치료제", "레카네맙"]
+    instruments:  # no dedicated KRX ETF — use broad 바이오 ETF as proxy
+      - {name: "KODEX 바이오", code: "244580", type: etf}
+    category: 바이오
+
+  # ── 금융/경제 ──────────────────────────────────────────
+  금리인하:
+    keywords: ["금리인하", "기준금리", "통화완화"]
+    instruments:
+      - {name: "KODEX 국고채10년", code: "148070", type: etf}
+    category: 금융
+
+  금:
+    keywords: ["금값", "금투자", "안전자산"]
+    instruments:
+      - {name: "KODEX 골드선물(H)", code: "132030", type: etf}
+    category: 금융
+
+  비트코인:
+    keywords: ["비트코인", "암호화폐", "가상자산"]
+    instruments:  # no KRX-listed bitcoin ETF; use crypto-related stock
+      - {name: "우리기술투자", code: "041190", type: stock}
+    category: 금융
+
+  밸류업:
+    keywords: ["밸류업", "기업가치제고", "자사주매입"]
+    instruments:
+      - {name: "TIGER 코리아밸류업", code: "480030", type: etf}
+    category: 금융
+
+  # ── 소비/유통 ──────────────────────────────────────────
+  K뷰티:
+    keywords: ["K뷰티", "화장품주", "K-beauty"]
+    instruments:
+      - {name: "KODEX K-뷰티", code: "475710", type: etf}
+    category: 소비
+
+  K푸드:
+    keywords: ["K푸드", "K-food", "라면수출"]
+    instruments:
+      - {name: "TIGER K-푸드", code: "475720", type: etf}
+    category: 소비
+
+  면세점:
+    keywords: ["면세점", "중국관광객", "유커"]
+    instruments:  # no dedicated ETF; use leading duty-free stock
+      - {name: "호텔신라", code: "008770", type: stock}
+    category: 소비
+
+  # ── 인프라/건설 ────────────────────────────────────────
+  조선:
+    keywords: ["조선주", "LNG선", "한화오션"]
+    instruments:
+      - {name: "TIGER 조선TOP10", code: "472170", type: etf}
+    category: 인프라
+
+  해운:
+    keywords: ["해운주", "컨테이너운임", "HMM"]
+    instruments:  # no dedicated ETF; use leading shipping stock
+      - {name: "HMM", code: "011200", type: stock}
+    category: 인프라
+
+  리츠:
+    keywords: ["리츠", "부동산투자신탁", "REITs"]
+    instruments:
+      - {name: "TIGER 리츠부동산인프라", code: "329200", type: etf}
+    category: 인프라
+
+  데이터센터:
+    keywords: ["데이터센터", "IDC", "서버팜"]
+    instruments:
+      - {name: "TIGER 데이터센터리츠&인프라", code: "473640", type: etf}
+    category: 인프라
+
+  전력인프라:
+    keywords: ["전력인프라", "전력설비", "변압기"]
+    instruments:
+      - {name: "KODEX K-전력인프라액티브", code: "497570", type: etf}
+    category: 인프라
+
+  # ── 정치/정책 ──────────────────────────────────────────
+  남북경협:
+    keywords: ["남북경협", "북한", "개성공단"]
+    instruments:  # no dedicated ETF; use leading inter-Korean cooperation stock
+      - {name: "현대아산", code: "011780", type: stock}
+    category: 정책
+
+  탄소중립:
+    keywords: ["탄소중립", "탄소배출권", "ESG"]
+    instruments:
+      - {name: "KODEX 탄소효율그린뉴딜", code: "395170", type: etf}
+    category: 정책
+
+  # ── 기타 ───────────────────────────────────────────────
+  엔터:
+    keywords: ["K-pop", "엔터주", "하이브"]
+    instruments:
+      - {name: "TIGER K-엔터", code: "475730", type: etf}
+    category: 기타
+
+  게임:
+    keywords: ["게임주", "게임산업", "크래프톤"]
+    instruments:
+      - {name: "TIGER 게임테마", code: "396510", type: etf}
+    category: 기타
+
+  중국소비:
+    keywords: ["중국소비", "중국경기부양", "중국리오프닝"]
+    instruments:
+      - {name: "TIGER 차이나CSI300", code: "192090", type: etf}
+    category: 기타
+
+  일본:
+    keywords: ["일본주식", "엔저", "일본증시"]
+    instruments:
+      - {name: "TIGER 일본니케이225", code: "241180", type: etf}
+    category: 기타
+
+  인도:
+    keywords: ["인도주식", "인도증시", "인도투자"]
+    instruments:
+      - {name: "TIGER 인도니프티50", code: "453810", type: etf}
+    category: 기타

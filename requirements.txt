@@ -1,0 +1,8 @@
+finance-datareader
+pykrx
+pandas
+numpy
+requests
+plotly
+python-dotenv
+pyyaml

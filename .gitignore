@@ -1,0 +1,33 @@
+# Environment
+.env
+
+# Data caches
+data/cache/
+data/trend_cache/
+
+# Generated reports
+report/backtest_result.html
+
+# Position state
+data/positions.json
+
+# Signal accuracy log
+signal_accuracy.csv
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
