@@ -23,17 +23,34 @@ def fetch_etf_data(code: str, start: str, end: str, use_cache: bool = True) -> p
             logger.warning("Corrupted cache for %s, refetching: %s", code, e)
             df = pd.DataFrame()
 
-        if not df.empty and df.index.max().strftime("%Y-%m-%d") < end:
-            new_start = (df.index.max() + pd.Timedelta(days=1)).strftime("%Y-%m-%d")
-            try:
-                new_df = fdr.DataReader(code, new_start, end)
-                if not new_df.empty:
-                    df = pd.concat([df, new_df])
-                    df = df[~df.index.duplicated(keep="last")]
-                    df.sort_index(inplace=True)
-                    df.to_csv(cache_file)
-            except Exception as e:
-                logger.warning("Failed to extend cache for %s: %s", code, e)
+        if not df.empty:
+            needs_update = False
+            # Extend backward: cache starts after requested start
+            if df.index.min().strftime("%Y-%m-%d") > start:
+                pre_end = (df.index.min() - pd.Timedelta(days=1)).strftime("%Y-%m-%d")
+                try:
+                    pre_df = fdr.DataReader(code, start, pre_end)
+                    if not pre_df.empty:
+                        df = pd.concat([pre_df, df])
+                        needs_update = True
+                except Exception as e:
+                    logger.warning("Failed to extend cache backward for %s: %s", code, e)
+
+            # Extend forward: cache ends before requested end
+            if df.index.max().strftime("%Y-%m-%d") < end:
+                new_start = (df.index.max() + pd.Timedelta(days=1)).strftime("%Y-%m-%d")
+                try:
+                    new_df = fdr.DataReader(code, new_start, end)
+                    if not new_df.empty:
+                        df = pd.concat([df, new_df])
+                        needs_update = True
+                except Exception as e:
+                    logger.warning("Failed to extend cache forward for %s: %s", code, e)
+
+            if needs_update:
+                df = df[~df.index.duplicated(keep="last")]
+                df.sort_index(inplace=True)
+                df.to_csv(cache_file)
     else:
         try:
             df = fdr.DataReader(code, start, end)
